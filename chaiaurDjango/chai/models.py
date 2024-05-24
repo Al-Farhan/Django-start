@@ -14,6 +14,7 @@ class ChaiVariety(models.Model):
     image = models.ImageField(upload_to='chais/')
     date_added = models.DateTimeField(default=timezone.now)
     description = models.TextField(default='')
+    price = models.IntegerField(default=1)
     type = models.CharField(max_length=2, choices=CHAI_TYPE_CHOICE)
 
     def __str__(self):
